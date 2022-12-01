@@ -1,0 +1,55 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+.topnav {
+  background-color: #0012FF;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #D0FF00;
+  color: rgb(0,0,0);
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.rotate-button{
+  width: 8rem;
+  height: 4rem;
+  border-radius: 0.8rem;
+  background-color: #0012FF;
+  color: white;
+}
+
+.unrotate-button{
+  width: 8rem;
+  height: 4rem;
+  border-radius: 0.8rem;
+  background-color: #e100ff;
+  color: white;
+}
