@@ -142,6 +142,7 @@ function mouseReleased(){
 
    shirt.dragging = false
    clicked = false
+   shirt.rotationInc = 0
 
 }
 

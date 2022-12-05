@@ -6,6 +6,7 @@ class Shirt{
     this.startDrag = null
     this.theta = theta
     this.rotationVal = 180
+    this.rotationInc = 0
     this.dragging = false
     this.rotateShirt = false
     this.autoRotateValue = 0
@@ -29,6 +30,8 @@ class Shirt{
       scale(50.0)
       translate(3, 8, 3)
       rotateX(180)
+      console.log(this.rotationVal)
+      this.rotationVal += this.rotationInc
       rotateY(this.rotationVal + this.autoRotateValue)
       // rotateZ(this.theta/4)
 
@@ -63,19 +66,19 @@ class Shirt{
       console.log(delta)
       //console.log(currentMousePos)
       if(delta > 0 || delta < 0){
-        let d = currentMousePos.dist(this.startDrag)
-        if(d > 10){
-          d = 10
-        }
-        if(d < -10){
-          d = -10
-        }
+        let d = currentMousePos.dist(this.startDrag) * 0.001
+        // if(d > 10){
+        //   d = 10
+        // }
+        // if(d < -10){
+        //   d = -10
+        // }
         // this.rotationVal -= d
 
-        if(currentMousePos.y > this.startDrag.y){
-          this.rotationVal -= d
+        if(currentMousePos.y > this.startDrag.y && d > 0){
+          this.rotationInc -= d
         }else{
-          this.rotationVal += d
+          this.rotationInc += d
         }
       }
 
